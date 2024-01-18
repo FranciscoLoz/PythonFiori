@@ -7,7 +7,7 @@ class asignatura:
         self._credit = credit
         self._assigned_prof = assigned_prof
 
-#Getters y setters (GRACIAS FIORI, ESTO ERA SUPER NECESARIO)
+#Getters y setters
         
     #GetterSetters de los IDs
     def get_assignature_id(self):

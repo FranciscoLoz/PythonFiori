@@ -6,7 +6,7 @@ class persona:
         self._gender = gender
         self._age = age
 
-#Getters y setters (GRACIAS FIORI, ESTO ERA SUPER NECESARIO)
+#Getters y setters
         
     #GetterSetter de DNI
     def get_dni(self):

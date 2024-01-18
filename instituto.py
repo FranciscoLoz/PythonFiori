@@ -7,7 +7,7 @@ class instituto:
         self._address=address
         self._courses=courses
 
-#Getters y setters (GRACIAS FIORI, ESTO ERA SUPER NECESARIO)
+#Getters y setters
         
     #GetterSetters del nombre
     def get_name(self):

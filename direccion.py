@@ -7,7 +7,7 @@ class direccion:
         self._country= country
         self._city= city
 
-#Getters y setters (GRACIAS FIORI, ESTO ERA SUPER NECESARIO)
+#Getters y setters
     
     #GetterSetter de la calle
     def get_street(self):

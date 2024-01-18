@@ -1,17 +1,17 @@
-import time
+import datetime
 from persona import persona
 from departamento import departamento
 from asignatura import asignatura
 
 class profesor(persona):
-    def __init__(self, dni:str, name:str, assignature:asignatura, department:departamento, gender:str, age:int, salary:float, stdate:time):
+    def __init__(self, dni:str, name:str, assignature:asignatura, department:departamento, gender:str, age:int, salary:float, stdate:datetime):
         super().__init__(dni, name, gender, age)
         self._salary = salary
         self._stdate = stdate
         self._assignature = assignature
         self._department = department
 
-#Getters y setters (GRACIAS FIORI, ESTO ERA SUPER NECESARIO)
+#Getters y setters
         
     #GetterSetters del salario
     def get_salary(self):
