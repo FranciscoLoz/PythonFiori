@@ -22,24 +22,54 @@ def inicio():
         print("3. Quiero consultar o modificar información acerca del equipo docente")
         print("4. Salir")
 
-        opcion = input("Ingrese el número de la opción que desea: ")
+        option = input("Ingrese el número de la opción que desea: ")
 
-        if opcion == "1":
+        if option == "1":
             # Lógica para la opción 1
-            print("Ha seleccionado la opción 1.")
+            while True:
+                print("Ha seleccionado la opción 1.")
+                print("-------------------------------------------------------------------")
+                print("Informacion del Instituto, ¿Que desea hacer?                       ")
+                print("-------------------------------------------------------------------")
+                print("1. Crear un nuevo Instituto")
+                print("2. Ver los datos de un instituto")
+                print("3. Modificar la informacion de un instituto")
+                print("4. Regresar al menú de selección primario")
 
-        elif opcion == "2":
+                highschool_option = input("Ingrese el número de la opción que desea: ")
+                if highschool_option == "1":
+                    # Lógica para la opcion 1 del apartado de instituto
+                    print ("Ha seleccionado la opción 1.")
+                
+                elif highschool_option == "2":
+                    #Lógica para la opcion 2 del apartado de instituto
+                    print ("Ha seleccionado la opción 2.")
+                
+                elif highschool_option == "3":
+                    #Lógica para la opción 3 del apartado de instituto
+                    print ("Ha seleccionado la opción 3.")
+                
+                elif highschool_option == "4":
+                    #Lógica para la opción 4 del apartado de instituto
+                    print ("Ha seleccionado la opción 4.")
+                
+                else:
+                    print("Opción no válida. Por favor, ingrese un número válido.")
+
+                    
+        elif option == "2":
             # Lógica para la opción 2
             print("Ha seleccionado la opción 2.")
+            print("Informacion del alumnado, ¿Que desea hacer?")
 
-        elif opcion == "3":
+        elif option == "3":
             # Lógica para la opción 3
             print("Ha seleccionado la opción 3.")
+            print("Informacion del equipo docente: ¿Que desea hacer?")
 
-        elif opcion == "4":
-            print("Saliendo del programa. ¡Hasta luego!")
+        elif option == "4":
+            print("Saliendo del programa. ¡Hasta la proxima!")
             break
 
         else:
             print("Opción no válida. Por favor, ingrese un número válido.")
-
