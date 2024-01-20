@@ -7,6 +7,9 @@ class direccion:
         self._country= country
         self._city= city
 
+    def get_info(self):
+        return self._street, self._number, self._pcode, self._country, self._city
+
 #Getters y setters
     
     #GetterSetter de la calle

@@ -1,11 +1,14 @@
 from curso import curso
+from direccion import direccion
+from departamento import departamento
 
 class instituto:
-    def __init__(self, name:str, cif:str, address:str, courses:curso):
+    def __init__(self, name:str, cif:str, address:direccion, courses:curso, department: departamento):
         self._name=name
         self._cif=cif
         self._address=address
         self._courses=courses
+        self._department=department
 
 #Getters y setters
         
@@ -36,3 +39,10 @@ class instituto:
     
     def set_courses(self, courses):
         self._courses=courses
+
+    #GetterSetters de los departamentos
+    def get_department(self):
+        return self._department
+    
+    def set_department(self, department):
+        self._department=department
