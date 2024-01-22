@@ -79,10 +79,10 @@ def inicio():
                     print("")
                     center_cif = input("Ingresa el CIF del instituto: ")
                     print("")
-                    center_address = input("Elige una zona del 1 al 3: ")
                     print("ZONA 1: PINO MONTANO (C-ASTRONOMIA)")
                     print("ZONA 2: BRENES (C-DIAMANTINO)")
                     print("ZONA 3: UTRERA (CARRETERA UTRERA)")
+                    center_address = input("Elige una zona del 1 al 3: ")
                     if center_address == "1":
                         decided_address = default_direction
 
@@ -96,6 +96,9 @@ def inicio():
                         print("El numero introducido no es válido")
                         break
                     print("")
+                    print("Curso de Desarrollo aplicaciones Web en Grado superior")
+                    print("Curso de Matemáticas en ESO")
+                    print("Curso de Lenguaje en Bachillerato")
                     center_course = input("Elige un curso del 1 al 3: ")
                     if center_course == "1":
                         decided_course = default_course
@@ -110,8 +113,25 @@ def inicio():
                         print("El numero introducido no es válido")
                         break
                     print("")
+                    print("Departamento de TIC en grado superior")
+                    print("Departamento de Ciencias en ESO")
+                    print("Departamento de humanidades en Bachillerato")
+                    center_department = input("Elige un departamento del 1 al 3: ")
+                    if center_department == "1":
+                        decided_department = default_department
 
-                    new_center = instituto(center_name, center_cif, decided_address, decided_course)
+                    elif center_course == "2":
+                        decided_department = default_department2
+                    
+                    elif center_course == "3":
+                        decided_department = default_department3
+                    
+                    else:
+                        print("El numero introducido no es válido")
+                        break
+
+                    new_center = instituto(center_name, center_cif, decided_address, decided_course, decided_department)
+                    center_list.append(new_center)
 
                 elif highschool_option == "2":
                     # Lógica para la opcion 2 del apartado de instituto
