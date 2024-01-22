@@ -66,7 +66,6 @@ def inicio():
                 print("                                                                   ")
                 print("1. Crear un nuevo Instituto")
                 print("2. Ver los datos de un instituto")
-                print("3. Modificar la informacion de un instituto")
                 print("4. Regresar al menú de selección primario")
 
                 highschool_option = input("Ingrese el número de la opción que desea: ")
@@ -157,10 +156,6 @@ def inicio():
                             print("ERROR, No se ha encontrado ningún instituto con el nombre especificado")
 
                 elif highschool_option == "3":
-                    # Lógica para la opción 3 del apartado de instituto
-                    print("Ha seleccionado la opción 3.")
-
-                elif highschool_option == "4":
                     # Lógica para la opción 4 del apartado de instituto
                     print("Regresando al menú principal.")
                     break  # Salir del bucle interno y regresar al menú principal
