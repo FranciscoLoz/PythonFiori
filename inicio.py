@@ -189,11 +189,16 @@ def inicio():
 
             else:
                 print("Opción no válida. Por favor, ingrese un número válido.")
-
         elif option == "3":
             # Lógica para la opción 3
             print("Ha seleccionado la opción 3.")
+            print("-------------------------------------------------------------------")
             print("Informacion del equipo docente: ¿Que desea hacer?")
+            print("-------------------------------------------------------------------")
+            print("1. Crear un nuevo Profesor")
+            print("2. Crear un nuevo Administrativo")
+            print("3. Consultar un Profesor existente")
+            print("4. Consultar un Administrativo existente")
 
         elif option == "4":
             print("Saliendo del programa. ¡Hasta la próxima!")
@@ -201,3 +206,5 @@ def inicio():
 
         else:
             print("Opción no válida. Por favor, ingrese un número válido.")
+            print("")
+            input("Presione cualquier tecla para continuar: ")
