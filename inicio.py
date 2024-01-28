@@ -1,6 +1,6 @@
-#from administrativo import administrativo
+from administrativo import administrativo
 #from alumno import alumno
-#from asignatura import asignatura
+from asignatura import asignatura
 from curso import curso
 from departamento import departamento
 from direccion import direccion
@@ -8,7 +8,7 @@ from instituto import instituto
 #from matricula import matricula
 #from nota import nota
 #from persona import persona
-#from profesor import profesor
+from profesor import profesor
 
 import os
 
@@ -31,11 +31,34 @@ def inicio():
     default_department2 = departamento(2, "Ciencias")
     default_department3 = departamento(3, "Letras")
 
+    #Asignaturas Mockup
+    programacion = asignatura(1, "clase para aprender lenguajes de programacion como java o python", 1234, default_teacher)
+    lengua = asignatura(2, "Clase para aprender la lengua de cervantes", 4321, "Maria Lopez")
+    matematicas = asignatura(3, "Clase para aprender a realizar complejas operaciones", 2143, "Rodolfo Perez")
+
     #Institutos Mockup
     default_center = instituto("MEDAC", "B93091536", default_direction, default_course, default_department)
+    default_center2 = instituto("IES Jacarandá", "41700853", default_direction2, default_course2, default_department2)
+    default_center3 = instituto("UPO", "Q9150016E", default_direction3, default_course3, default_department3)
+
+    #Profesores Mockup
+    default_teacher = profesor("12345678A", "Jose Miguel Cordon Fioris", programacion, default_department, "Hombre", 35, 1500, )
+    default_teacher2 = profesor("87654321B", "María Lopez", lengua, default_department3, "Mujer", 59, 2000, )
+    default_teacher3 = profesor("43218765C", "Rodolfo Perez", matematicas, default_department2, "Hombre", 43, 1785, )
+
+    #Administradores Mockup
+    default_admin = administrativo("12345678A", "John Doe", "Hombre", 35, 2450, )
+    default_admin2 = administrativo("87654321B", "Jane Doe", "Mujer", 30, 2400, )
+    default_admin3 = administrativo("87651234C", "Jimmy Doe", "Hombre", 26, 2100, )
 
     #Listas de almacenamiento
-    center_list = [default_center]
+    address_list = [default_direction, default_direction2, default_direction3]
+    center_list = [default_center, default_center2, default_center3]
+    teacher_list = [default_teacher, default_teacher2, default_teacher3]
+    admin_list = [default_admin, default_admin2, default_teacher3]
+    department_list = [default_department, default_department2, default_department3]
+    course_list = [default_course, default_course2, default_course3]
+
 
     while True:
         # Limpiar la pantalla
@@ -157,6 +180,7 @@ def inicio():
 
                 elif highschool_option == "3":
                     # Lógica para la opción 4 del apartado de instituto
+                    print("Ha seleccionado la opción 3.")
                     print("Regresando al menú principal.")
                     break  # Salir del bucle interno y regresar al menú principal
 
@@ -175,15 +199,16 @@ def inicio():
 
             alumn_option = input("Ingrese el número de la opción que desea: ")
             if alumn_option == "1":
-                # Lógica para la opcion 1 del apartado de instituto
+                # Lógica para la opcion 1 del apartado de alumno
                 print("Ha seleccionado la opción 1.")
 
             elif alumn_option == "2":
-                # Lógica para la opcion 2 del apartado de instituto
+                # Lógica para la opcion 2 del apartado de alumno
                 print("Ha seleccionado la opción 2.")
                 
             elif alumn_option == "3":
-                # Lógica para la opción 4 del apartado de instituto
+                # Lógica para la opción 4 del apartado de alumno
+                print("Ha seleccionado la opción 3.")
                 print("Regresando al menú principal.")
                 break  # Salir del bucle interno y regresar al menú principal
 
@@ -199,6 +224,33 @@ def inicio():
             print("2. Crear un nuevo Administrativo")
             print("3. Consultar un Profesor existente")
             print("4. Consultar un Administrativo existente")
+            print("5. Regresar al menu de selección Primario")
+
+            staff_option = input("Ingrese el número de la opcion que desea: ")
+            if staff_option == "1":
+                #Lógica para la opcion 1 del apartado de personal
+                print("Ha seleccionado la opción 1.")
+
+            elif staff_option == "2":
+                #Lógica para la opcion 2 del apartado de personal
+                print("Ha seleccionado la opción 2.")
+            
+            elif staff_option == "3":
+                #Lógica para la opcion 3 del apartado de personal
+                print("Ha seleccionado la opción 3.")
+
+            elif staff_option == "4":
+                #Lógica para la opción 4 del apartado de personal
+                print("Ha seleccionado la opción 4.")
+            
+            elif staff_option == "5":
+                #Lógica para la opción 5 del apartado de personal
+                print("Ha seleccionado la opción 5.")
+                print("Regresando al menú principal.")
+                break  # Salir del bucle interno y regresar al menú principal
+
+            else:
+                print("Opción no válida. Por favor, ingrese un número válido.")
 
         elif option == "4":
             print("Saliendo del programa. ¡Hasta la próxima!")

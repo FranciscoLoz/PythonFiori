@@ -1,8 +1,10 @@
 from curso import curso
 from asignatura import asignatura
+from persona import persona
 
-class alumno:
-    def __init__(self, course:curso, assignature:asignatura, email:str):
+class alumno(persona):
+    def __init__(self, dni:str, name:str, gender:str, age:int, course:curso, assignature:asignatura, email:str):
+        super().__init__(dni, name, gender, age)
         self._course=course
         self._assignature=assignature
         self._email=email
