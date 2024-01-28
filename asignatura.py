@@ -1,7 +1,7 @@
 from profesor import profesor
 
 class asignatura:
-    def __init__(self, assignature_id:int, desc:str, credit:int, assigned_prof:profesor):
+    def __init__(self, assignature_id: int, desc: str, credit: int, assigned_prof=None):
         self._assignature_id = assignature_id
         self._desc = desc
         self._credit = credit
